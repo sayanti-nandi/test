@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Test PDF</title>
+    <script>$(document).ready(function(){
+  document.body.innerText = 'checking';
+  if (localStorage.getItem('isLoaded') !== 'yes') {
+    localStorage.setItem('isLoaded', 'yes');
+    alert('reloading now');
+        document.body.innerText += ' - loaded once';
+    location.reload();
+  } else {
+    alert('not reloading');
+        document.body.innerText += ' - loaded twice';
+  }
+});</script>
+</head>
+<body>
+
+    <embed src="http://docs.google.com/gview?embedded=true&url=http://utopiadesk.com/test.pdf" style="width:100%; height:100%;">
+
+</body>
+</html>
